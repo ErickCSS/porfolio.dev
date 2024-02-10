@@ -3,6 +3,12 @@ import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
+import Php from "./icons/Php.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import AstroIcon from "./icons/Astroicon.astro";
+import React from "./icons/React.astro";
+
 
 const TAGS = {
   NEXT: {
@@ -15,6 +21,31 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#003159] text-white",
+    icon: Php,
+  },
+  BOOTSTRAP: {
+    name: "Boostrap",
+    class: "bg-[#360e67] text-white",
+    icon: Bootstrap,
+  },
+  NODEJS: {
+    name: "NodeJs",
+    class: "bg-[#12250e] text-white",
+    icon: Nodejs,
+  },
+  ASTROICON: {
+    name: "Astro",
+    class: "bg-[#372669] text-white",
+    icon: AstroIcon,
+  },
+  REACTICON: {
+    name: "ReactJs",
+    class: "bg-[#0d607d] text-white",
+    icon: React,
+  },
 };
 const PROJECTS = [
   {
@@ -25,15 +56,23 @@ const PROJECTS = [
     link: "https://gamerclub.vip",
     linkprueba: "https://gamerclub.netlify.app",
     image: "/proyectos/gamerclub.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PHP, TAGS.BOOTSTRAP],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "BLOGTIMedia - Blog de tecnología y noticias",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Servicios de alojamiento, streaming y software a demanda a todas las instituciones cristianas sin fines de lucro sin cargos.",
+    link: "https://blogtimedia.com/",
+    image: "/proyectos/blogtimedia.webp",
+    tags: [TAGS.NODEJS, TAGS.TAILWIND],
+  },
+  {
+    title: "Proseragro - Promotores de Servicios y Agrogestión Agrícola",
+    description:
+      "Somos un proyecto promovido con el compromiso de contribuir con el desarrollo del sector agrícola al ofrecer comunicación y marketing especializado en el sector fitosanitario",
+    link: "https://proseragro.com/",
+    image: "/proyectos/proseragro.webp",
+    tags: [TAGS.ASTROICON, TAGS.TAILWIND, TAGS.REACTICON],
   },
 ];
 ---
@@ -69,9 +108,9 @@ const PROJECTS = [
 
             <div class="mb-4">
               <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-              <p class="text-gray-400/50 text-xs">{postdata && linkprueba && (
+              <p class="text-gray-400/50 text-sm">{postdata && linkprueba && (
                 <span class="mr-1">{postdata}</span> 
-                <a class="text-yellow-400/50" href={linkprueba}>Ver avances</a>
+                <a target="_blank" class="text-yellow-400/50" href={linkprueba}>Ver avances</a>
               )}</p>
             </div>
             <footer class="flex items-end justify-start  gap-x-4">
