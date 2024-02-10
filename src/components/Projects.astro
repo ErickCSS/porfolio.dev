@@ -1,5 +1,4 @@
 ---
-import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
@@ -21,9 +20,10 @@ const PROJECTS = [
   {
     title: "GamerClubVIP - Comunidad de jugadores y Noticias de videojuegos",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Plataforma para los jugadores, con las noticias mas recientes de videojuegos, guías, trucos y mucho más.",
+    postdata: "Actualmente se encuentra en migración a Next.js con un mejor diseño y rendimiento.",
     link: "https://gamerclub.vip",
-    github: "https://github.com/pheralb/svgl",
+    linkprueba: "https://gamerclub.netlify.app",
     image: "/proyectos/gamerclub.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
@@ -40,13 +40,13 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, postdata, linkprueba }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
               alt="Recién llegado vs 5 años en Nueva Zelanda"
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
             />
@@ -67,14 +67,14 @@ const PROJECTS = [
               ))}
             </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {github && (
-                <LinkButton href={github}>
-                  <GitHub class="size-6" />
-                  Code
-                </LinkButton>
-              )}
+            <div class="mb-4">
+              <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+              <p class="text-gray-400/50 text-xs">{postdata && linkprueba && (
+                <span class="mr-1">{postdata}</span> 
+                <a class="text-yellow-400/50" href={linkprueba}>Ver avances</a>
+              )}</p>
+            </div>
+            <footer class="flex items-end justify-start  gap-x-4">
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />
