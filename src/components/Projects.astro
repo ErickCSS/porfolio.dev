@@ -10,7 +10,10 @@ import AstroIcon from "./icons/Astroicon.astro";
 import React from "./icons/React.astro";
 import SassIcon from "./icons/SassIcon.astro";
 import ExpressIcon from "./icons/ExpressIcon.astro";
-
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
+import Wordpress from "./icons/Wordpress.astro";
+import Elementor from "./icons/Elementor.astro";
 
 const TAGS = {
   NEXT: {
@@ -57,6 +60,26 @@ const TAGS = {
     name: "Express",
     class: "bg-[#464646] text-white",
     icon: ExpressIcon,
+  },
+  HTMLICON: {
+    name: "HTML",
+    class: "bg-[#464646] text-white",
+    icon: HtmlIcon,
+  },
+  CSSICON: {
+    name: "CSS",
+    class: "bg-[#165576] text-white",
+    icon: CssIcon,
+  },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-[#7ccce4] text-black",
+    icon: Wordpress,
+  },
+  ELEMENTOR: {
+    name: "Elementor",
+    class: "bg-[#ff9eae] text-white",
+    icon: Elementor,
   }
   };
 
@@ -96,6 +119,34 @@ const PROJECTS = [
     tags: [TAGS.ASTROICON, TAGS.SASSICON],
   },
 ];
+
+
+const SECOND_PROJECTS = [
+{
+    title: "Dra. Catherine Merejo",
+    description:
+      "Dra. Merejo, Cardiología Clínica, Arritmias, Marcapasos, Electrofisiología y mucho más. ",
+    link: "https://dramerejo.com/",
+    image: "/proyectos/dramerejo.webp",
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR],
+  },
+{
+    title: "Mi Sonografo - Xbit 90",
+    description:
+      "XBit 90's brand new processing platform brings brilliant ultrasound image quality, which is a milestone for CHISON.",
+    link: "https://misonografo.netlify.app/",
+    image: "/proyectos/misonografo.webp",
+    tags: [TAGS.HTMLICON, TAGS.CSSICON],
+  },
+  {
+    title: "eChurchApp by BlogTIMedia",
+    description:
+      "A web application created to facilitate the management of your ministry.",
+    link: "https://iglesia.do/",
+    image: "/proyectos/echurchapp.webp",
+    tags: [TAGS.ASTROICON, TAGS.CSSICON, TAGS.NODEJS, TAGS.EXPRESSICON],
+  },
+];
 ---
 
 <div class="grid grid-cols-2 gap-16">
@@ -119,7 +170,7 @@ const PROJECTS = [
             <ul class="flex flex-row mb-2 gap-x-2">
               {tags.map((tag) => (
                 <li>
-                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+                  <span class={`flex  gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
                     <tag.icon class="size-4" />
                     {tag.name}
                   </span>
@@ -133,6 +184,53 @@ const PROJECTS = [
                 <span class="mr-1">{postdata}</span> 
                 <a target="_blank" class="text-yellow-400/50" href={linkprueba}>Ver avances</a>
               )}</p>
+            </div>
+            <footer class="flex items-end justify-start  gap-x-4">
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
+
+<div class="grid grid-cols-3 gap-16 mt-16">
+  {
+    SECOND_PROJECTS.map(({ image, title, description, tags, link }) => (
+      <article class="flex flex-col items-center w-full space-x-0 space-y-8 group md:space-x-8 md:space-y-0">
+        <div class="w-full mb-5">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-top w-full h-48 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:max-w-lg">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li class="first:mb-2">
+                  <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mb-4">
+              <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
             </div>
             <footer class="flex items-end justify-start  gap-x-4">
               {link && (
