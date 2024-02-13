@@ -14,6 +14,8 @@ import HtmlIcon from "./icons/HtmlIcon.astro";
 import CssIcon from "./icons/CssIcon.astro";
 import Wordpress from "./icons/Wordpress.astro";
 import Elementor from "./icons/Elementor.astro";
+import TypescriptIcon from "./icons/TypescriptIcon.astro";
+import MailchimpIcon from "./icons/MailchimpIcon.astro";
 
 const TAGS = {
   NEXT: {
@@ -80,6 +82,16 @@ const TAGS = {
     name: "Elementor",
     class: "bg-[#ff9eae] text-white",
     icon: Elementor,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-[#1b4171] text-white",
+    icon: TypescriptIcon,
+  },
+  MAILCHIMP: {
+    name: "Mailchimp",
+    class: "bg-[#7c7c7c] text-white",
+    icon: MailchimpIcon,
   }
   };
 
@@ -95,7 +107,15 @@ const PROJECTS = [
     tags: [TAGS.PHP, TAGS.BOOTSTRAP],
   },
   {
-    title: "BLOGTIMedia - Blog de tecnología y noticias",
+    title: "Proseragro - Promotores de Servicios y Agrogestión Agrícola",
+    description:
+      "Somos un proyecto promovido con el compromiso de contribuir con el desarrollo del sector agrícola al ofrecer comunicación y marketing especializado en el sector fitosanitario",
+    link: "https://proseragro.com/",
+    image: "/proyectos/proseragro.webp",
+    tags: [TAGS.ASTROICON, TAGS.TYPESCRIPT, TAGS.REACTICON, TAGS.MAILCHIMP],
+  },
+  {
+    title: "BLOGTIMedia - Servicios de alojamiento",
     description:
       "Servicios de alojamiento, streaming y software a demanda a todas las instituciones cristianas sin fines de lucro sin cargos.",
     link: "https://blogtimedia.com/",
@@ -103,20 +123,12 @@ const PROJECTS = [
     tags: [TAGS.NODEJS, TAGS.EXPRESSICON, TAGS.TAILWIND],
   },
   {
-    title: "Proseragro - Promotores de Servicios y Agrogestión Agrícola",
-    description:
-      "Somos un proyecto promovido con el compromiso de contribuir con el desarrollo del sector agrícola al ofrecer comunicación y marketing especializado en el sector fitosanitario",
-    link: "https://proseragro.com/",
-    image: "/proyectos/proseragro.webp",
-    tags: [TAGS.ASTROICON, TAGS.TAILWIND, TAGS.REACTICON],
-  },
-  {
     title: "Fundación Letty Rivera - Formando talentos a través del Arte y La Cultura",
     description:
       "Buscamos rescatar el arte en nuestro pueblo, La Vega. República Dominicana.",
     link: "https://fundacionlettyrivera.com",
     image: "/proyectos/fundacionlettyrivera.webp",
-    tags: [TAGS.ASTROICON, TAGS.SASSICON],
+    tags: [TAGS.ASTROICON, TAGS.TYPESCRIPT, TAGS.SASSICON],
   },
 ];
 
