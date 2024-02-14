@@ -97,35 +97,34 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: "GamerClubVIP - Comunidad de jugadores y Noticias de videojuegos",
+    title: "GamerClubVIP - Community of gamers and video game news.",
     description:
-      "Plataforma para los jugadores, con las noticias mas recientes de videojuegos, guías, trucos y mucho más.",
-    postdata: "Actualmente se encuentra en migración a Next.js con un mejor diseño y rendimiento.",
+      "Platform for gamers, featuring the latest video game news, guides, cheats, and much more.",
+    postdata: "Currently undergoing migration to Next.js for improved design and performance.",
     link: "https://gamerclub.vip",
     linkprueba: "https://gamerclub.netlify.app",
     image: "/proyectos/gamerclub.webp",
     tags: [TAGS.PHP, TAGS.BOOTSTRAP],
   },
   {
-    title: "Proseragro - Promotores de Servicios y Agrogestión Agrícola",
-    description:
-      "Somos un proyecto promovido con el compromiso de contribuir con el desarrollo del sector agrícola al ofrecer comunicación y marketing especializado en el sector fitosanitario",
+    title: "Proseragro - Service Promoters and Agricultural Agro-Management.",
+    description: "We are a project committed to contributing to the development of the agricultural sector by providing specialized communication and marketing services in the phytosanitary sector.",
     link: "https://proseragro.com/",
     image: "/proyectos/proseragro.webp",
     tags: [TAGS.ASTROICON, TAGS.TYPESCRIPT, TAGS.REACTICON, TAGS.MAILCHIMP],
   },
   {
-    title: "BLOGTIMedia - Servicios de alojamiento",
+    title: "BLOGTIMedia - Lodging and streaming services",
     description:
-      "Servicios de alojamiento, streaming y software a demanda a todas las instituciones cristianas sin fines de lucro sin cargos.",
+      "Accommodation, streaming, and on-demand software services provided free of charge to all non-profit Christian institutions.",
     link: "https://blogtimedia.com/",
     image: "/proyectos/blogtimedia.webp",
     tags: [TAGS.NODEJS, TAGS.EXPRESSICON, TAGS.TAILWIND],
   },
   {
-    title: "Fundación Letty Rivera - Formando talentos a través del Arte y La Cultura",
+    title: "Fundación Letty Rivera - Developing talents through Art and Culture.",
     description:
-      "Buscamos rescatar el arte en nuestro pueblo, La Vega. República Dominicana.",
+      "We aim to rescue art in our town, La Vega, Dominican Republic.",
     link: "https://fundacionlettyrivera.com",
     image: "/proyectos/fundacionlettyrivera.webp",
     tags: [TAGS.ASTROICON, TAGS.TYPESCRIPT, TAGS.SASSICON],
@@ -137,7 +136,7 @@ const SECOND_PROJECTS = [
 {
     title: "Dra. Catherine Merejo",
     description:
-      "Dra. Merejo, Cardiología Clínica, Arritmias, Marcapasos, Electrofisiología y mucho más. ",
+      "Dra. Merejo, Clinical Cardiology, Arrhythmias, Pacemakers, Electrophysiology, and much more.",
     link: "https://dramerejo.com/",
     image: "/proyectos/dramerejo.webp",
     tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR],
@@ -192,9 +191,9 @@ const SECOND_PROJECTS = [
 
             <div class="mb-4">
               <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-              <p class="text-gray-400/50 text-sm">{postdata && linkprueba && (
+              <p class="text-gray-500/60 dark:text-gray-400/50 text-sm">{postdata && linkprueba && (
                 <span class="mr-1">{postdata}</span> 
-                <a target="_blank" class="text-yellow-400/50" href={linkprueba}>Ver avances</a>
+                <a target="_blank" class="dark:text-yellow-400/50 text-[#2c7d8e]/60" href={linkprueba}>Stay tuned for updates.</a>
               )}</p>
             </div>
             <footer class="flex items-end justify-start  gap-x-4">
