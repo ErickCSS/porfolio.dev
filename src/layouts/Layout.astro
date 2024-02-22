@@ -23,12 +23,27 @@ const { description, title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
+    <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://erickcs.com" />
-    <meta property="og:image" content="/erickcruz.webp" />
-    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Erick Cruz Portfolio - Fronted Developer RD" />
+    <meta
+      property="og:description"
+      content="+4 years of experience. Frontend Developer from Santo Domingo, Dominican Republic 🇩🇴. Specialized in Web Development and unique user experiences."
+    />
+    <meta property="og:image" content="https://erickcs.com/erickcruz.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="erickcs.com" />
+    <meta property="twitter:url" content="https://erickcs.com" />
+    <meta name="twitter:title" content="Erick Cruz Portfolio - Fronted Developer RD" />
+    <meta
+      name="twitter:description"
+      content="+4 years of experience. Frontend Developer from Santo Domingo, Dominican Republic 🇩🇴. Specialized in Web Development and unique user experiences."
+    />
+    <meta name="twitter:image" content="https://erickcs.com/erickcruz.webp" />
+
     <ViewTransitions />
   </head>
 
